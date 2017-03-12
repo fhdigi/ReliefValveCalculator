@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ReliefValveCalculator.ReliefValvePage" Title="Relief Valve Data">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="50, 50, 100, 200" Android="100, 50, 100, 200" />
+	</ContentPage.Padding>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="100" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		
+
+		</Grid.ColumnDefinitions>
+		<Label Text="Separator Diameter" Grid.Row="0" Grid.Column="1" />
+		<Entry Grid.Row="0" Grid.Column="2" x:Name="txtDiameter"/>
+		<Label Text="Separator Length" Grid.Row="1" Grid.Column="1" />
+		<Entry Grid.Row="1" Grid.Column="2" x:Name="txtLength"/>
+		<Label Text="Refrigerant" Grid.Row="2" Grid.Column="1" />
+		<Picker Grid.Row="2" Grid.Column="2">
+			<Picker.Items>
+				<x:String>Ammonia</x:String>
+				<x:String>R-22</x:String>
+				<x:String>R-134a</x:String>
+				<x:String>R-290</x:String>
+				<x:String>R-404A</x:String>
+				<x:String>R-507</x:String>
+			</Picker.Items>
+		</Picker>
+		<Button Text="Calculate" BackgroundColor="Blue" Button.TextColor="White" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+		Clicked="Handle_Clicked"/>
+
+
+
+
+		<Label Text="Hansen Value Rating" Grid.Row="4" Grid.Column="1" />
+		<Entry Grid.Row="4" Grid.Column="2" x:Name="txtHansenRating"/>
+		<Label Text="Hansen Part Number" Grid.Row="5" Grid.Column="1" />
+		<Entry Grid.Row="5" Grid.Column="2" x:Name="txtHansenPart" />
+
+		<Image 
+		Grid.Row="1"
+		Grid.Column="0"
+
+			
+			HeightRequest="400" HorizontalOptions="End" WidthRequest="200" 
+			Scale="1.75"
+			Source="HansenReliefValve.jpg"
+			/>
+		
+
+
+			
+	</Grid>
+</ContentPage>
