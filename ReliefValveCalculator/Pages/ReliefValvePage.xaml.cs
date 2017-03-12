@@ -16,8 +16,9 @@ namespace ReliefValveCalculator
 		{
 			double diameter = Convert.ToDouble(txtDiameter.Text);
 			double length = Convert.ToDouble(txtLength.Text);
+			double refrigerantFactor = 0.7;
 
-			double volume = (Math.PI / 4.0) * Math.Pow(diameter, 2) * length;
+			double volume = (Math.PI / 4.0) * Math.Pow(diameter, 2) * length * refrigerantFactor;
 			txtHansenRating.Text=volume.ToString();
 				
 			                                  
