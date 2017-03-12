@@ -8,6 +8,7 @@ namespace ReliefValveCalculator
 		{
 			InitializeComponent();
 
+			// call the main page
 			MainPage = new NavigationPage(new ReliefValvePage());
 		}
 
